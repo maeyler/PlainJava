@@ -1,0 +1,9 @@
+class java.lang.System
+p1 = System.getProperty("user.timezone"); //--> "America
+class java.util.TimeZone
+t1 = TimeZone.getDefault();
+class mae.sss.Chooser
+Chooser.loadClass();
+TZone.main(null);
+p2 = System.getProperty("user.timezone"); //--> "Europe
+t2 = TimeZone.getDefault(); //--> sun.util

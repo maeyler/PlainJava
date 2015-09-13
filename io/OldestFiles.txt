@@ -1,0 +1,286 @@
+Finding the oldest files
+20/02/2014 -- C:\java\work\opt-alg\intro\Counter.class 
+01/06/2014 -- C:\java\work\opt-alg\SSS.exception 
+07/08/2012 -- C:\java\work\opt-alg\tools.jar 
+21/03/2012 -- C:\java\work\opt-alg\part\PartitionByLuck.java 
+18/02/2014 -- C:\java\work\opt-alg\Syllabus.pdf 
+18/05/2009 -- C:\java\work\opt-alg\math\Function.png 
+25/01/2014 -- C:\java\work\opt-alg\Planets.txt 
+15/04/2014 -- C:\java\work\opt-alg\part\Partition.xls 
+Starting folder: C:\java\work\opt-alg
+68 files in 5 folders
+
+Finding the oldest files
+09/06/2011 -- C:\java\work\qwork\jquran\javadoc\package-list 
+02/08/2012 -- C:\java\work\time\ömür\Ömür.GIF 
+30/07/2012 -- C:\java\work\time\ömür\Ömür.JPG 
+29/12/2002 -- C:\java\work\mae\brow\brow.MF 
+04/08/2012 -- C:\java\work\time\ömür\ömür 3-8.PNG 
+01/10/2003 -- C:\java\work\mae\ezvu\makeIqra.bat 
+10/06/2003 -- C:\java\work\mae\util\ArrayListModel.class 
+09/06/2011 -- C:\java\work\qwork\jquran\javadoc\stylesheet.css 
+03/10/2002 -- C:\java\work\mae\expr\for Printer.doc 
+09/08/2012 -- C:\java\work\time\ömür\Salih Halkalarý.docx 
+01/06/2014 -- C:\java\work\opt-alg\SSS.exception 
+17/02/1999 -- C:\java\work\mae\brow\img\OpenXX.gif 
+26/07/2003 -- C:\java\work\mae\tut\fun\package.html 
+22/10/2004 -- C:\java\work\saha\sf\insp\tools.jar 
+20/12/2001 -- C:\java\work\saha\sf\io\HelloAp.java 
+07/09/2003 -- C:\java\work\mae\expr\expr.jcp 
+22/08/2012 -- C:\java\work\time\ömür\Salihin.jpg 
+31/12/2013 -- C:\java\work\saha\sf\hs_err_pid2408.log 
+28/09/2002 -- C:\java\work\mae\mj3\xmp\test1.mJ 
+04/05/2004 -- C:\java\work\mae\mj3\xmp5\queen.microJ 
+12/01/2005 -- C:\java\work\mae\mj3\xmp5\araba.mj5 
+29/09/2003 -- C:\java\work\mae\ezvu\iqra.names 
+07/09/2013 -- C:\java\work\saha\sf\Java-8-Revealed.pdf 
+18/05/2009 -- C:\java\work\opt-alg\math\Function.png 
+14/07/2003 -- C:\java\work\mae\tut\tut.properties 
+16/05/2012 -- C:\java\work\qwork\mucem.ser 
+23/11/2003 -- C:\java\work\saha\sf\io\Encoding.teacher 
+11/06/2011 -- C:\java\work\org\ShaikhHamdullahBasicVolt.ttf 
+20/12/2002 -- C:\java\work\mae\tut\Phone.txt 
+21/05/2012 -- C:\java\work\qwork\uzun.xls 
+09/06/2011 -- C:\java\work\qwork\tanzil\quran-uthmani.xml 
+09/06/2011 -- C:\java\work\org\jqurantree-1.0.0-bin.zip 
+Starting folder: C:\java\work
+1024 files in 97 folders
+
+Finding the oldest files
+18/04/2003 -- C:\java\docs\demo JDK1.4\java3d\ConfiguredUniverse\j3d1x1 
+21/06/2013 -- C:\java\dev\eclipse\configuration\org.eclipse.osgi\.bundledata.1 
+12/06/2013 -- C:\java\dev\eclipse\p2\org.eclipse.equinox.p2.core\cache\binary\org.eclipse.cdt_root_8.0.2.201202111925 
+21/06/2013 -- C:\java\dev\eclipse\configuration\org.eclipse.osgi\.manager\.fileTable.4 
+21/06/2013 -- C:\java\dev\eclipse\configuration\org.eclipse.osgi\.manager\.fileTable.5 
+03/07/2013 -- C:\java\dev\eclipse\configuration\org.eclipse.core.runtime\.manager\.fileTable.7 
+03/07/2013 -- C:\java\dev\eclipse\configuration\org.eclipse.core.runtime\.manager\.fileTable.8 
+14/04/2001 -- C:\java\plain\work 2002\Chap\Color\aLibrary\.DS_Store 
+14/06/2013 -- C:\java\docs\tut\ext\basics\examples\DictionaryServiceDemo\ExtendedDictionary\src\META-INF\services\dictionary.spi.Dictionary 
+31/10/2013 -- C:\java\JRE\jre7\PATCH.ERR 
+28/07/2002 -- C:\java\plain\work 2002\class\ev\TEST.EV 
+14/04/2001 -- C:\java\plain\work 2002\Chap\Color\aLibrary\.FBCIndex 
+14/04/2001 -- C:\java\plain\work 2002\Chap\Color\aLibrary\.FBCLockFolder\.FBCSemaphoreFile 
+11/12/2003 -- C:\java\docs\guide\sound\Figures\audioInput.GIF 
+18/02/1992 -- C:\java\plain\work 2002\insp\native\STDIO.H 
+30/07/2012 -- C:\java\work\time\ömür\Ömür.JPG 
+12/06/2013 -- C:\java\dev\eclipse\p2\org.eclipse.equinox.p2.core\cache\binary\org.eclipse.rcp.configuration_root.win32.win32.x86_1.0.0.M20130204-1200 
+28/10/2002 -- C:\java\plain\work 2002\class\demo\META-INF\MANIFEST.MF 
+17/01/2002 -- C:\java\plain\work 2002\first\PRODUCT.PAS 
+10/11/2011 -- C:\java\jars\teach\UML_object_diagram.PNG 
+12/06/2013 -- C:\java\dev\eclipse\features\org.eclipse.cdt.platform_8.0.2.201202111925\META-INF\ECLIPSEF.RSA 
+14/06/2013 -- C:\java\docs\tut\i18n\serviceproviders\examples\rbcpsample\src\java.util.spi.ResourceBundleControlProvider 
+12/06/2013 -- C:\java\dev\eclipse\features\org.eclipse.cdt.platform_8.0.2.201202111925\META-INF\ECLIPSEF.SF 
+31/07/2002 -- C:\java\plain\work 2002\class\ev\Extract\EXTRACT.TXT 
+11/12/2003 -- C:\java\docs\guide\rmi\archives\sockets.tar.Z 
+08/12/1994 -- C:\java\docs\others\EV1-6A.ZIP 
+18/06/2013 -- C:\java\JRE\jre5\lib\management\jmxremote.access 
+06/11/2013 -- C:\java\dev\sdk\samples\android-19\legacy\GestureBuilder\graphics\gesturebuilder.ai 
+12/06/2013 -- C:\java\dev\sdk\platforms\android-17\framework.aidl 
+11/03/2004 -- C:\java\docs\tut OLD\sound\example-1dot2\flute+hrn+mrmba.aif 
+06/11/2013 -- C:\java\adt\FirstTest\bin\resources.ap_ 
+12/06/2013 -- C:\java\dev\eclipse\plugins\org.eclipse.ui.intro.universal_3.2.600.v20120912-155524\.api_description 
+06/11/2013 -- C:\java\dev\sdk\samples\android-19\legacy\ApiDemos\assets\HelloActivity.apk 
+11/03/2004 -- C:\java\docs\tut OLD\2d\display\ClipImage.atag 
+18/04/2003 -- C:\java\docs\demo JDK1.4\java3d\Sound\hello_universe.au 
+14/06/2013 -- C:\java\docs\tut\deployment\TOC.auto 
+11/12/2003 -- C:\java\docs\guide\versioning\spec\catalog.back 
+17/09/2013 -- C:\java\JRE\jre7\lib\security\java.security.bak 
+10/10/2002 -- C:\java\plain\work 2002\class\Browser.bat 
+18/06/2013 -- C:\java\JRE\jre5\lib\fontconfig.98.bfc 
+12/06/2013 -- C:\java\dev\sdk\platforms\android-17\data\res\raw\accessibility_gestures.bin 
+12/06/2013 -- C:\java\dev\eclipse\plugins\org.eclipse.platform_4.2.2.v201302041200\splash.bmp 
+05/06/2002 -- C:\java\plain\work 2002\insp\dump\Release\java.bsc 
+29/06/2002 -- C:\java\plain\work 2002\insp\native\Hello.c 
+06/11/2013 -- C:\java\adt\.metadata\.plugins\org.eclipse.wst.internet.cache\-815189293.cache 
+06/11/2013 -- C:\java\dev\sdk\extras\google\usb_driver\androidwinusba64.cat 
+18/06/2013 -- C:\java\JRE\jre5\lib\i386\jvm.cfg 
+06/11/2013 -- C:\java\dev\eclipse\configuration\org.eclipse.osgi\bundles\224\1\.cp\index\_0.cfs 
+06/11/2013 -- C:\java\dev\eclipse\configuration\org.eclipse.osgi\bundles\224\1\.cp\index\_0.cfx 
+18/04/2003 -- C:\java\docs\demo JDK1.4\java3d\geometry\galleon.cg 
+22/05/2002 -- C:\java\plain\work 2002\class\Test.cla 
+02/10/1998 -- C:\java\plain\work 2002\GUI\AWT\test\GUIWindow$1.class 
+17/07/2013 -- C:\java\adt\FirstTest\.classpath 
+22/05/2002 -- C:\java\plain\work 2002\class\TestFull.cls 
+18/06/2013 -- C:\java\JDK7\lib\visualvm\etc\visualvm.clusters 
+12/06/2013 -- C:\java\dev\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\bin\runrc.cmd 
+02/02/1987 -- C:\java\plain\turbo.com 
+20/01/2004 -- C:\java\docs\guide\security\jgss\tutorials\bcsLogin.conf 
+20/01/2004 -- C:\java\docs\guide\security\jaas\tutorials\sample_jaas.config 
+11/07/2000 -- C:\java\plain\work 2002\notes\.courseadd 
+18/06/2013 -- C:\java\JRE\jre5\bin\jpicpl32.cpl 
+31/05/2002 -- C:\java\plain\work 2002\insp\dump\StdAfx.cpp 
+11/12/2003 -- C:\java\docs\guide\2d\spec\catalog.css 
+06/11/2013 -- C:\java\dev\sdk\tools\Jet\JetCreator\JetCreatorhlp.dat 
+18/06/2013 -- C:\java\JDK7\jre\lib\currency.data 
+16/12/2010 -- C:\java\jars\pages\thumbs.db 
+06/11/2013 -- C:\java\dev\eclipse\configuration\org.eclipse.help.base\index\en_US\_9_1.del 
+10/03/2014 -- C:\java\adt\FirstTest\bin\classes.dex 
+21/06/2013 -- C:\java\dev\eclipse\configuration\org.eclipse.osgi\bundles\204\1\.cp\dictionaries\en_GB.dictionary 
+11/12/2003 -- C:\java\docs\guide\swing\1.4\dnd.html.diffs 
+27/05/2002 -- C:\java\plain\work 2002\insp\dump\Release\java.dll 
+11/03/2002 -- C:\java\plain\work 2002\notes\Intro to Java.doc 
+09/08/2012 -- C:\java\work\time\ömür\Salih Halkalarý.docx 
+09/06/2002 -- C:\java\plain\work 2002\insp\dump\java.dsp 
+27/05/2002 -- C:\java\plain\work 2002\insp\dump\java.dsw 
+11/08/2004 -- C:\java\docs\api\javax\swing\plaf\synth\doc-files\synth.dtd 
+12/06/2013 -- C:\java\dev\eclipse\plugins\org.eclipse.platform_4.2.2.v201302041200\LegacyIDE.e4xmi 
+12/06/2013 -- C:\java\dev\eclipse\.eclipseproduct 
+06/11/2013 -- C:\java\dev\sdk\tools\lib\android.el 
+06/11/2013 -- C:\java\dev\sdk\samples\android-19\legacy\GestureBuilder\graphics\gesturebuilder.eps 
+07/07/2004 -- C:\java\docs\others\Abay\Zaman.etx 
+23/05/2004 -- C:\java\docs\others\Abay\Zaman.ev 
+01/06/2014 -- C:\java\work\opt-alg\SSS.exception 
+01/08/2001 -- C:\java\jars\runthis.exe 
+27/05/2002 -- C:\java\plain\work 2002\insp\dump\Debug\hello.exp 
+06/11/2013 -- C:\java\dev\sdk\add-ons\addon-google_apis-google-8\docs\reference\_header_mapkey.ezt 
+12/07/2004 -- C:\java\docs\others\Abay\Meal.ezvu 
+21/06/2013 -- C:\java\dev\eclipse\configuration\org.eclipse.osgi\.manager\.fileTableLock 
+06/11/2013 -- C:\java\dev\sdk\samples\android-19\legacy\BackupRestore\proguard.flags 
+14/06/2013 -- C:\java\docs\tut\uiswing\examples\learn\CelsiusConverterProject\src\CelsiusConverterGUI.form 
+06/11/2013 -- C:\java\dev\sdk\samples\android-19\legacy\TtsEngine\assets\eng-USA.freq 
+06/11/2013 -- C:\java\dev\sdk\tools\templates\other\BlankFragment\globals.xml.ftl 
+06/11/2013 -- C:\java\dev\eclipse\configuration\org.eclipse.osgi\bundles\224\1\.cp\index\segments.gen 
+02/10/1998 -- C:\java\docs\sss-web\image\LeftArrow.gif 
+18/06/2013 -- C:\java\JRE\jre6\lib\audio\soundbank.gm 
+06/11/2013 -- C:\java\dev\sdk\samples\android-19\ui\actionbar\DoneBar\build.gradle 
+12/06/2013 -- C:\java\dev\eclipse\p2\org.eclipse.equinox.p2.engine\profileRegistry\profile.profile\1368497369227.profile.gz 
+30/01/2001 -- C:\java\plain\work 2002\insp\native\include\jawt.h 
+14/06/2013 -- C:\java\docs\tut\.hgtags 
+06/11/2013 -- C:\java\adt\.metadata\.plugins\org.eclipse.help.ui\scope_sets\emulator.hist 
+30/01/2001 -- C:\java\plain\work 2002\GUI\Draw.htm 
+02/10/1998 -- C:\java\plain\work 2002\GUI\AWT\test\GUIWindow.html 
+06/11/2013 -- C:\java\dev\sdk\add-ons\addon-google_apis-google-8\docs\reference\allclasses-frame.html~ 
+12/06/2013 -- C:\java\dev\eclipse\plugins\com.android.ide.eclipse.adt.package_22.0.0.v201305140200--675183\icons\adt.icns 
+13/10/2004 -- C:\java\docs\sss-web\image\sss.ico 
+27/05/2002 -- C:\java\plain\work 2002\insp\dump\Debug\vc60.idb 
+11/03/2004 -- C:\java\docs\tut OLD\idl\hello\example-1dot2\Hello.idl 
+27/05/2002 -- C:\java\plain\work 2002\insp\dump\Debug\hello.ilk 
+12/06/2013 -- C:\java\dev\sdk\system-images\android-17\armeabi-v7a\userdata.img 
+17/07/2013 -- C:\java\adt\.metadata\.plugins\org.eclipse.core.resources\.projects\FirstTest\.indexes\a0\de\properties.index 
+12/06/2013 -- C:\java\dev\eclipse\features\org.eclipse.cdt.platform_8.0.2.201202111925\META-INF\eclipse.inf 
+12/06/2013 -- C:\java\dev\eclipse\configuration\org.eclipse.equinox.simpleconfigurator\bundles.info 
+17/11/2004 -- C:\java\docs\demo JDK1.4\java3d\images\Picasa.ini 
+18/04/2003 -- C:\java\docs\demo JDK1.4\java3d\geometry\brick2.int 
+18/04/2003 -- C:\java\docs\demo JDK1.4\java3d\geometry\thdoor.inta 
+18/06/2013 -- C:\java\JRE\jre5\lib\psfont.properties.ja 
+11/02/2002 -- C:\java\plain\work 2002\decomp\Decompiler.jad 
+14/04/2001 -- C:\java\plain\work 2002\Chap\aLibrary.jar 
+02/10/1998 -- C:\java\plain\work 2002\GUI\AWT\test\AppletButton.java 
+14/06/2013 -- C:\java\docs\tut\figures\uiswing\lookandfeel\pspbrwse.jbf 
+05/04/2002 -- C:\java\plain\work 2002\first\sim\sim.jcp 
+05/04/2002 -- C:\java\plain\work 2002\first\sim\sim.jcw 
+06/11/2013 -- C:\java\dev\sdk\samples\android-19\input\multitouch\BasicMultitouch\multitouch.jd 
+06/11/2013 -- C:\java\dev\sdk\samples\android-19\legacy\JetBoy\res\raw\level1.jet 
+17/09/2013 -- C:\java\JRE\jre7\lib\jfr\default.jfc 
+11/03/2004 -- C:\java\docs\tut OLD\information\player.jnlp 
+11/03/2004 -- C:\java\docs\tut OLD\uiswing\components\example-1dot4\images\youngdad.jpeg 
+18/04/2003 -- C:\java\docs\demo JDK1.4\java3d\images\apimage.jpg 
+11/12/2003 -- C:\java\docs\guide\plugin\developer_guide\menu_script.js 
+18/06/2013 -- C:\java\JRE\jre6\bin\client\classes.jsa 
+18/06/2013 -- C:\java\JDK7\lib\visualvm\platform\.lastModified 
+17/07/2013 -- C:\java\adt\.metadata\.plugins\org.eclipse.debug.core\.launches\FirstTest.launch 
+22/01/2004 -- C:\java\docs\guide\jmx\examples\Lookup\ldap\60jmx-schema.ldif 
+27/05/2002 -- C:\java\plain\work 2002\insp\dump\Debug\hello.lib 
+18/06/2013 -- C:\java\JRE\jre6\lib\security\trusted.libraries 
+30/07/2004 -- C:\java\plain\dnd\DragListDemo.lnk 
+06/11/2013 -- C:\java\adt\.metadata\.plugins\org.eclipse.core.resources\.projects\WhichWay\.location 
+12/06/2013 -- C:\java\dev\eclipse\p2\org.eclipse.equinox.p2.engine\profileRegistry\profile.profile\.lock 
+31/12/2013 -- C:\java\work\saha\sf\hs_err_pid2408.log 
+18/04/2003 -- C:\java\docs\demo JDK1.4\java3d\Lightwave\greenball.lwo 
+18/04/2003 -- C:\java\docs\demo JDK1.4\java3d\Lightwave\ballcone.lws 
+04/01/2002 -- C:\java\plain\work 2002\mJ1\xmp\fibon2.mJ 
+18/06/2013 -- C:\java\JRE\jre6\lib\deploy\jqs\ff\chrome.manifest 
+12/06/2013 -- C:\java\dev\sdk\build-tools\android-4.2.2\renderscript\clang-include\module.map 
+12/06/2013 -- C:\java\dev\eclipse\plugins\org.eclipse.platform_4.2.2.v201302041200\about.mappings 
+10/03/2014 -- C:\java\adt\.metadata\.plugins\org.eclipse.core.resources\.projects\WhichWay\.markers 
+14/06/2013 -- C:\java\docs\tut\deployment\applet\examples\applet_AppletWithParameters\src\.AppletTakesParams.java.marks 
+14/06/2013 -- C:\java\docs\tut\deployment\applet\examples\applet_AppletWithCustomProgressIndicator\manifest.mf 
+20/08/2004 -- C:\java\docs\guide\management\JVM-MANAGEMENT-MIB.mib 
+04/05/2004 -- C:\java\work\mae\mj3\xmp5\queen.microJ 
+11/03/2004 -- C:\java\docs\tut OLD\sound\example-1dot2\trippygaia1.mid 
+12/01/2005 -- C:\java\work\mae\mj3\xmp5\araba.mj5 
+12/06/2013 -- C:\java\dev\sdk\platforms\android-17\data\fonts\fonts.mk 
+06/11/2013 -- C:\java\dev\sdk\samples\android-19\legacy\ApiDemos\res\raw\test_cbr.mp3 
+06/11/2013 -- C:\java\dev\sdk\docs\training\animation\anim_screenslide.mp4 
+01/03/1985 -- C:\java\plain\turbo.msg 
+18/04/2003 -- C:\java\docs\demo JDK1.4\java3d\geometry\minimart.mtl 
+29/09/2003 -- C:\java\work\mae\ezvu\iqra.names 
+10/06/2002 -- C:\java\plain\work 2002\insp\dump\java.ncb 
+27/05/2002 -- C:\java\plain\work 2002\insp\dump\Debug\java.obj 
+12/06/2013 -- C:\java\dev\sdk\platforms\android-17\data\res\raw\fallbackring.ogg 
+06/11/2013 -- C:\java\dev\sdk\docs\design\media\scroll_indicator.ogv 
+11/03/2004 -- C:\java\docs\tut OLD\essential\strings\lessondefs.mem4.old 
+10/06/2002 -- C:\java\plain\work 2002\insp\dump\java.opt 
+12/06/2013 -- C:\java\dev\eclipse\plugins\org.eclipse.ui.intro.universal_3.2.600.v20120912-155524\.options 
+11/01/2002 -- C:\java\plain\work 2002\mJ1\parse.out 
+06/11/2013 -- C:\java\dev\sdk\samples\android-19\legacy\KeyChainDemo\assets\keychain.p12 
+27/05/2002 -- C:\java\plain\work 2002\insp\dump\Debug\vc60.pdb 
+11/12/2003 -- C:\java\docs\guide\rmi-iiop\interop.pdf 
+18/06/2013 -- C:\java\JRE\jre5\lib\cmm\CIEXYZ.pf 
+06/11/2013 -- C:\java\dev\sdk\samples\android-19\legacy\ApiDemos\res\raw\androids.pkm 
+12/06/2013 -- C:\java\dev\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\bin\complete-ant-cmd.pl 
+10/06/2002 -- C:\java\plain\work 2002\insp\dump\java.plg 
+11/03/2004 -- C:\java\docs\tut OLD\uiswing\components\example-1dot4\images\pngIcon.png 
+20/01/2004 -- C:\java\docs\guide\security\jaas\tutorials\sampleacn.policy 
+11/03/2004 -- C:\java\docs\tut OLD\rmi\example-1dot2\java.policy2 
+08/09/2011 -- C:\java\plain\CK MAE\CK MAE.ppt 
+06/11/2013 -- C:\java\adt\.metadata\.plugins\org.eclipse.help.ui\scope_sets\Default.pref 
+12/06/2013 -- C:\java\dev\eclipse\p2\org.eclipse.equinox.p2.engine\.settings\org.eclipse.equinox.p2.artifact.repository.prefs 
+06/11/2013 -- C:\java\dev\sdk\tools\proguard\examples\annotations\lib\annotations.pro 
+12/06/2013 -- C:\java\dev\eclipse\plugins\com.android.ide.eclipse.adt.package_22.0.0.v201305140200--675183\ide.product 
+17/07/2013 -- C:\java\adt\FirstTest\.project 
+12/06/2013 -- C:\java\dev\sdk\platforms\android-17\build.prop 
+14/07/2003 -- C:\java\work\mae\tut\tut.properties 
+14/06/2013 -- C:\java\docs\tut\figures\uiswing\learn\3SwingApplication.psd 
+12/06/2013 -- C:\java\dev\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\bin\runant.py 
+14/06/2013 -- C:\java\docs\tut\supporting\syntaxhighlighter_3.0.83\compass\config.rb 
+18/06/2013 -- C:\java\JRE\jre6\lib\deploy\jqs\ff\install.rdf 
+06/11/2013 -- C:\java\dev\sdk\extras\android\support\v7\mediarouter\src\.readme 
+18/04/2003 -- C:\java\docs\demo JDK1.4\java3d\Sound\README.release 
+10/03/2014 -- C:\java\adt\.metadata\.plugins\org.eclipse.core.resources\.safetable\org.eclipse.core.resources 
+18/04/2003 -- C:\java\docs\demo JDK1.4\java3d\geometry\gas.rgb 
+11/03/2004 -- C:\java\docs\tut OLD\sound\example-1dot2\jungle.rmf 
+06/11/2013 -- C:\java\dev\sdk\samples\android-19\legacy\RenderScript\HelloCompute\src\com\example\android\rs\hellocompute\mono.rs 
+12/06/2013 -- C:\java\dev\sdk\build-tools\android-4.2.2\renderscript\include\rs_math.rsh 
+31/05/2002 -- C:\java\plain\work 2002\insp\dump\Release\StdAfx.sbr 
+14/06/2013 -- C:\java\docs\tut\jndi\software\config\corba.schema 
+14/06/2013 -- C:\java\docs\tut\supporting\syntaxhighlighter_3.0.83\compass\shCore.scss 
+18/06/2013 -- C:\java\JRE\jre5\lib\security\java.security 
+16/05/2012 -- C:\java\work\qwork\mucem.ser 
+13/07/2004 -- C:\java\docs\guide\rmi\activation\src\client.sh 
+06/11/2013 -- C:\java\dev\sdk\tools\lib\lib64GLES_CM_translator.so 
+14/06/2013 -- C:\java\docs\tut\jdbc\basics\examples\JDBCTutorial\sql\javadb\create-procedure-show-suppliers.sql 
+18/06/2013 -- C:\java\JRE\jre5\lib\fontconfig.98.properties.src 
+19/08/2004 -- C:\java\docs\guide\access\new-features1_5.suzy 
+06/11/2013 -- C:\java\dev\sdk\docs\training\design-navigation\example-wireframe-tablet.svg 
+14/06/2013 -- C:\java\docs\tut\deployment\webstart\examples\webstart_AppWithCustomProgressIndicator\src\other\AppletQuiz.swf 
+18/06/2013 -- C:\java\JDK7\lib\ct.sym 
+11/12/2003 -- C:\java\docs\guide\rmi\archives\sockets.tar 
+05/11/2003 -- C:\java\docs\others\teach2\File.teacher 
+22/01/2004 -- C:\java\docs\guide\jmx\examples\Lookup\jini\jini.properties.template 
+06/03/2004 -- C:\java\docs\demo JDK1.4\jfc\Metalworks\MyTheme.theme 
+11/03/2004 -- C:\java\docs\tut OLD\figures\uiswing\mini\close.tif 
+21/06/2013 -- C:\java\dev\eclipse\configuration\org.eclipse.osgi\bundles\163\data\cache.timestamps 
+10/03/2014 -- C:\java\adt\.metadata\.plugins\org.eclipse.core.resources\.root\4.tree 
+11/06/2011 -- C:\java\work\org\ShaikhHamdullahBasicVolt.ttf 
+24/05/1991 -- C:\java\plain\text\lexTurk\diger.txt 
+12/06/2013 -- C:\java\dev\eclipse\p2\org.eclipse.equinox.p2.core\cache\binary\org.eclipse.jdt_root_3.8.2.v20130116-090414-8-8nFu3FNOfwKLRuqgXKIy9z0I83 
+12/06/2013 -- C:\java\dev\eclipse\p2\org.eclipse.equinox.p2.core\cache\binary\org.eclipse.platform_root_4.2.1.v20130118-173121-9MF7GHYdG0B5kx4E_SkfZV-1mNjVATf67ZAb7 
+12/06/2013 -- C:\java\dev\eclipse\p2\org.eclipse.equinox.p2.core\cache\binary\org.eclipse.rcp_root_4.2.2.v20130129-152330-7IARAABrMQkGSvMgQnUlz-DQz00h 
+12/06/2013 -- C:\java\dev\eclipse\p2\org.eclipse.equinox.p2.core\cache\binary\com.android.ide.eclipse.adt.package.product_root.win32.win32.x86_22.0.0.v201305140200--675183 
+10/03/2014 -- C:\java\adt\.metadata\.plugins\org.eclipse.core.resources\.root\.indexes\properties.version 
+18/06/2013 -- C:\java\JDK7\db\lib\derby.war 
+03/11/1998 -- C:\java\jars\sound\s112.wav 
+06/11/2013 -- C:\java\dev\sdk\docs\training\animation\anim_crossfade.webm 
+13/04/2002 -- C:\java\plain\work 2002\text\comp\Primes.xls 
+10/03/2014 -- C:\java\adt\.metadata\.plugins\org.eclipse.e4.workbench\workbench.xmi 
+09/06/2011 -- C:\java\work\qwork\tanzil\quran-uthmani.xml 
+18/06/2013 -- C:\java\JDK7\lib\visualvm\visualvm\config\Modules\org-netbeans-api-visual.xml_hidden 
+12/06/2013 -- C:\java\dev\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\etc\junit-frames-xalan1.xsl 
+18/06/2013 -- C:\java\JRE\jre6\lib\deploy\jqs\ff\chrome\content\overlay.xul 
+06/03/2004 -- C:\java\docs\demo JDK1.4\applets\MoleculeViewer\models\benzene.xyz 
+06/11/2013 -- C:\java\dev\sdk\docs\app.yaml 
+15/01/2002 -- C:\java\plain\work 2002\first\test.zip 
+Starting folder: C:\java
+102362 files in 12086 folders
+Elapsed time: 225 seconds

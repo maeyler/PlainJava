@@ -1,0 +1,66 @@
+//we need a text file -- encoded in Turkish
+class java.io.File
+//we need a text file -- encoded in Turkish
+f1 = new File("Cp1254.txt");
+//open the local file
+class java.io.FileInputStream
+//open the local file
+i1 = new FileInputStream(f1);
+//how many bytes?
+i1.available(); //--> 30
+//make a char array
+c1 = Menu.newArray("char", 30);
+//we need a Reader
+class java.io.InputStreamReader
+//convert the file in Turkish encoding
+r1 = new InputStreamReader(i1, "Cp1254");
+//any chars left for reading?
+//+Yes
+r1.ready(); //--> true
+//read them into the char array
+r1.read(c1); //--> 30
+//any chars left for reading?
+//+No
+r1.ready(); //--> false
+//any bytes left in the stream?
+//+No
+i1.available(); //--> 0
+//convert the chars to a String
+class java.lang.String
+//convert the chars to a String
+s1 = new String(c1); //--> "Türkçe harfler...
+
+//the same data -- encoded in unicode
+f2 = new File("UTF-8.txt");
+//open the local file
+i2 = new FileInputStream(f2);
+//unicode is longer for Turkish chars
+i2.available(); //--> 47
+//make a char array
+c2 = Menu.newArray("char", 47);
+//convert the file in unicode encoding
+r2 = new InputStreamReader(i2, "UTF-8");
+//read into the char array
+r2.read(c2); //--> 31
+//convert the chars to a String
+s2 = new String(c2, 1, 30); //--> "Türkçe harfler...
+//are they equal?
+s2.equals(s1); //--> true
+
+//open the unicode file again
+in = new FileInputStream(f2);
+//how many bytes?
+in.available(); //--> 47
+//make a byte array
+ba = Menu.newArray("byte", 47);
+//read into the byte array
+in.read(ba); //--> 47
+//convert the bytes to a String
+s = new String(ba, "UTF-8"); //--> "?Türkçe harfler...
+//are they equal?
+//+NO!
+s.equals(s1); //--> false
+//convert the bytes skipping the first three bytes
+t = new String(ba, 3, 44, "UTF-8"); //--> "Türkçe harfler...
+//are they equal?
+t.equals(s1); //--> true

@@ -1,0 +1,24 @@
+//start with URL
+class java.net.URL
+//start with URL
+//and our Chooser
+class mae.sss.Chooser
+
+//Case 1. u is a jar file that contains your class
+u1 = new URL("file:/C:/java/jars/DiningPhilosophers.jar");
+//Case 1. u is a jar file that contains your class
+Chooser.loadClass(u1, "DiningPhilosophers");
+//make an instance
+dp = new DiningPhilosophers(4);
+//make an instance
+//and start it
+dp.start();
+
+//Case 2. u is a remote jar file with a known address
+u2 = new URL("http://mimoza.marmara.edu.tr/~maeyler/time/timeDemo.jar");
+//Case 2. u is a remote jar file with a known address
+Chooser.loadClass(u2, "time.Clock");
+//make an instance
+ben = Clock.newInstance("Bencil");
+//display the window
+x10 = Clock.display(ben, "BEN", 300, 0);
