@@ -1,4 +1,4 @@
-# simpleJ
-simple Java code from earlier work
+# SimpleJava
+Simple Java code from earlier work
 
-check [this page](https://guides.github.com/activities/hello-world/) for examples
+single-file examples are included
