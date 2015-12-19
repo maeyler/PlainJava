@@ -28,9 +28,9 @@ class Copy  {
    public boolean add(String k, String key) {
        Set<String> t = map.get(k);
        if (t == null) {
-           t = new TreeSet<String>(); mapp.put(k, t);
+           t = new TreeSet<String>(); map.put(k, t);
        }
-       return t.add(key.lowerCase());
+       return t.add(key.toLowerCase());
    }
    public static void main(String[] args) throws IOException  {
       String fName = "endüstri müh.txt";   

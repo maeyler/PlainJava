@@ -6,14 +6,14 @@ import javax.tools.*;
 //www.programcreek.com/java-api-examples/index.php?api=javax.tools.JavaCompiler
 
 class CompileTest {
-    final static JavaCompiler javac = ToolProvider.getSystemJavaCompiler();
+    final static JavaCompiler tool = ToolProvider.getSystemJavaCompiler();
         //If I add tools.jar to "jre/lib/ext" folder then this returns null. 
         //But if I add tools.jar to the "jre/lib" folder then it works.
         //http://bugs.java.com/bugdatabase/view_bug.do?bug_id=7181951
     public static int compile(String... s) {
-        if (javac == null) 
+        if (tool == null) 
             throw new RuntimeException("cannot locate tools.jar");
-        return javac.run(null, null, null, s);
+        return tool.run(null, null, null, s);
     }
     public static int compile(File d) {
         if (d.isDirectory()) {
