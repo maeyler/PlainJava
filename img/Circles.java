@@ -33,14 +33,14 @@ public class Circles extends JPanel {
   public void paint(Graphics g) {
     g.setColor(Color.gray); 
     drawCircle(g, H, H, D);
-    g.setColor(Color.lightGray); 
-    //g.setColor(Color.green); 
-    circlesOnCircle(g, N, 6, H, D-76, true);
     //g.setColor(Color.lightGray); 
+    g.setColor(Color.green); 
+    circlesOnCircle(g, N, 6, H, D-76, true);
+    g.setColor(Color.lightGray); 
     circlesOnCircle(g, N, 7, H, D-60, false);
-    //g.setColor(Color.cyan); 
+    g.setColor(Color.cyan); 
     circlesOnCircle(g, N, 8, H, D-42, true);
-    //g.setColor(Color.orange); 
+    g.setColor(Color.orange); 
     circlesOnCircle(g, N, 9, H, D-20, false);
   }
   public static void main(String[] a) {
