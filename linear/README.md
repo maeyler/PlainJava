@@ -8,6 +8,8 @@ First, copy your data from any source -- such as the matrix below
 ````
 Then start [solver.jar](https://github.com/maeyler/PlainJava/blob/master/linear/solver.jar?raw=true), or press "New" button if it is already running
 
+Check [sample problems](https://github.com/maeyler/PlainJava/blob/master/linear/sample%20problems.xls?raw=true) for other matrices
+
 Now you may solve the system manually using row operations, or press 's' for a solution
 
 In order to slow down the automated solution, double click on the rows, starting at the top row
