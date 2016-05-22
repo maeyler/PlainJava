@@ -1,9 +1,8 @@
 import number.Number;
-import number.*;
+import number.Factory;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.event.*;
 import javax.swing.table.JTableHeader;
 import javax.swing.border.EmptyBorder;
 
@@ -12,12 +11,12 @@ public class Solver implements Runnable {
     enum Mode { none, exch, mult, addR }
     
     static final String 
-        MSG  = "Linear Equation Solver -- V1.0 May 2016",
+        MSG  = "Linear Equation Solver -- V1.1 May 2016",
         TXT1 = "e: exchange  m: multiply  a: add row  s: solve",
-        EXCH = "exchange Row ",
-        MULT = "multiply Row ",
-        ADDR = "add to Row ",
-        TXT2 = "x Row";
+        EXCH = "exchange row ",
+        MULT = "multiply row ",
+        ADDR = "add to row ",
+        TXT2 = "x row";
     static final Toolkit TK = Toolkit.getDefaultToolkit();
     static final int 
         RESOLUTION = TK.getScreenResolution();
@@ -28,12 +27,13 @@ public class Solver implements Runnable {
     static final Font NORMAL = scaledFont("Dialog", 0, 13);
     static final Font SMALL = scaledFont("Dialog", 0, 10);
     
-    final Matrix mat;
+    final Matrix mat, adj;
     final JTable tab;
     final Ear ear = new Ear();
     final JFrame frm = new JFrame("Solver");
     final JLabel msg = new JLabel(MSG);
     final JButton but = new JButton("New");
+    final JButton inv = new JButton("Inverse");
     final JLabel lab1 = new JLabel(TXT1);
     final JLabel lab2 = new JLabel(TXT2);
     final JTextField txt1 = new JTextField();
@@ -45,6 +45,7 @@ public class Solver implements Runnable {
     public Solver(int x, int y) { this(Matrix.fromCB(), x, y); }
     public Solver(Matrix m, int x, int y) {
         mat = m;
+        adj = (mat.isSquare()? m.adjoinID() : null);
         JPanel pan = new JPanel(new BorderLayout(GAP, GAP));
         
         tab = new JTable(mat);
@@ -64,7 +65,6 @@ public class Solver implements Runnable {
         int w = mat.getColumnCount() * W;
         int h = mat.getRowCount() * H + (d.height+3);
         scr.setPreferredSize(new Dimension(w, h));
-        //tab.getSelectionModel().addListSelectionListener(ear);
         tab.addKeyListener(ear);
         tab.addMouseListener(ear);
         pan.add(scr, "Center");
@@ -84,149 +84,152 @@ public class Solver implements Runnable {
         frm.setVisible(true);
     }
     JPanel topPanel() {
-        JPanel top = new JPanel();
+        JPanel p = new JPanel();
         
         msg.setFont(NORMAL);
         msg.setHorizontalAlignment(SwingConstants.CENTER);
-        top.add(msg);
+        p.add(msg);
         
         but.setFont(SMALL);
         but.addActionListener(ear);
-        top.add(but);
-        return top;
+        p.add(but);
+        
+        inv.setFont(SMALL);
+        inv.addActionListener(ear);
+        if (mat.isSquare()) p.add(inv);
+        return p;
     }
     JPanel composite() {
         JPanel p = new JPanel();
+        
         lab1.setFont(SMALL);
         p.add(lab1);
         txt1.setFont(SMALL);
         txt1.setColumns(3);
         txt1.addActionListener(ear);
+        txt1.addKeyListener(ear);
         p.add(txt1);
+        
         lab2.setFont(SMALL);
         p.add(lab2);
         txt2.setFont(SMALL);
         txt2.setColumns(3);
         txt2.addActionListener(ear);
+        txt2.addKeyListener(ear);
         p.add(txt2);
         return p;
     }
     JPanel bottomPanel() {
-        JPanel bot = new JPanel();
-        bot.setLayout(new BoxLayout(bot, BoxLayout.X_AXIS));
+        JPanel p = new JPanel();
+        p.setLayout(new BoxLayout(p, BoxLayout.X_AXIS));
         
-        bot.add(composite());
-        bot.add(Box.createHorizontalGlue());
+        p.add(composite());
+        p.add(Box.createHorizontalGlue());
         
         det.setText(mat.toString());
         det.setFont(NORMAL);
         det.setHorizontalAlignment(SwingConstants.CENTER);
-        bot.add(det);
-        //bot.add(Box.createHorizontalStrut(H));
+        p.add(det);
+        //p.add(Box.createHorizontalStrut(H));
         
-        return bot;
+        return p;
+    }
+    void delay(int msec) {
+        try { Thread.sleep(msec);
+        } catch (InterruptedException e) {}
     }
     public void run() {
-        int k = 0; boolean done = false;
+        boolean done = false;
+        int k = 0; 
         while (!done) {
+            delay(1500);
             done = mat.forward(k);
             tab.getSelectionModel().setSelectionInterval(k, k);
-            k++;  //det.setText("Row "+k);
-            display();  //tab.repaint();
-            try { Thread.sleep(1500);
-            } catch (InterruptedException e) {
-            }
+            k++; display();  //tab.repaint();
         }
         if (mat.getRowCount() == mat.getColumnCount()) return;
-        mat.backward(); display();
+        delay(1500); mat.backward(); display();
     }
     public void solve() {
         System.out.println("Begin Solver");
         new Thread(this).start(); 
     }
-    public void exchange(int i, int k) {
-        //System.out.printf("exchange row %s by row %s \n", i, k);
-        mat.exchange(i, k); display();
-    }
-    public void multiply(int i, int k) { multiply(i, new Whole(k));}
-    public void multiply(int i, Number k) {
-        //System.out.printf("multiply row %s by %s \n", i, k);
-        mat.divide(i, k.inverse()); display();
-    }
-    public void addRow(int i, int j) { addRow(i, new Whole(1), j); }
-    public void addRow(int i, Number k, int j) {
-        //System.out.printf("add to row %s: %s x row %s \n", i, k, j);
-        mat.row[i].addRow(k, mat.row[j]); display();
-    }
-    void display() {
+    public void display() {
         det.setText("|A| = "+mat.det); tab.repaint(); 
     }
     void report() {
         int i = tab.getSelectedRow(); int j = tab.getSelectedColumn();
         System.out.printf("row:%s, col:%s\n", i, j);
     }
-    void displayFields(boolean b) {
-        txt1.setVisible(b); lab2.setVisible(b); txt2.setVisible(b); 
-        if (!b) { tab.requestFocus(); }
-        else { txt1.selectAll(); txt2.selectAll(); txt1.requestFocus(); }
+    void hideFields() {
+        txt1.setVisible(false); txt2.setVisible(false); 
+        lab2.setVisible(false); tab.requestFocus(); 
     }
     void displayText1() {
         txt1.selectAll(); txt1.setVisible(true); txt1.requestFocus();
     }
+    void displayText2(boolean focus) {
+        txt2.selectAll(); txt2.setVisible(true); 
+        if (focus) txt2.requestFocus();
+        else lab2.setVisible(true); 
+    }
     void setMode(Mode m) {
-        if (mode == m) return;
-        mode = m; 
+        if (mode == m) return; mode = m; 
         curRow = tab.getSelectedRow();
-        if (m == Mode.exch) {
-            lab1.setText(EXCH+curRow+" by Row");
-            displayText1(); 
+        if (m == Mode.none || curRow == -1) {
+            lab1.setText(TXT1);
+            hideFields();
+        } else if (m == Mode.exch) {
+            lab1.setText(EXCH+curRow+" <=> row");
+            displayText2(true); 
         } else if (m == Mode.mult) {
-            lab1.setText(MULT+curRow);
+            lab1.setText(MULT+curRow+" by ");
             displayText1(); 
         } else if (m == Mode.addR) {
             lab1.setText(ADDR+curRow+"  "); 
-            displayFields(true);
-        } else {   //  Mode.none
-            lab1.setText(TXT1);
-            displayFields(false);
+            displayText1(); displayText2(false);
         }
     }
+    Number numFromField1() {
+        Number k = Factory.parseNumber(txt1.getText());
+        if (k != null || k.value() != 0) return k; 
+        TK.beep(); return null;
+    }
+    int intFromField2() {
+        Number n = Factory.parseNumber(txt2.getText());
+        int j = (n == null? -1 : (int)n.value());
+        if (j >= 0 && j != curRow && j < mat.M) return j; 
+        TK.beep(); return -1;
+    }
     void doAction() {
-        //int i = tab.getSelectedRow();
         if (mode == Mode.exch) {
-            Number n = Factory.parseNumber(txt1.getText());
-            if (n == null || n.value() >= mat.M) { TK.beep(); return; }
-            exchange(curRow, (int)n.value()); 
+            int j = intFromField2();
+            if (j < 0) return;
+            mat.exchange(curRow, j); 
         } else if (mode == Mode.mult) {
-            Number k = Factory.parseNumber(txt1.getText());
-            if (k == null) { TK.beep(); return; }
-            multiply(curRow, k); 
+            Number k = numFromField1();
+            if (k == null) return; 
+            mat.multiply(curRow, k); 
         } else if (mode == Mode.addR) {
-            Number k = Factory.parseNumber(txt1.getText());
-            Number n = Factory.parseNumber(txt2.getText());
-            if (k == null | n == null || n.value() >= mat.M) { TK.beep(); return; }
-            addRow(curRow, k, (int)n.value());
+            Number k = numFromField1();
+            int j = intFromField2();
+            if (k == null || j < 0) return; 
+            mat.addRow(curRow, k, j);
         }
-        setMode(Mode.none);
+        setMode(Mode.none); display();
     }
 
     class Ear extends MouseAdapter implements ActionListener, KeyListener {
-        public void valueChanged(ListSelectionEvent e) { //ListSelectionListener
-            setMode(Mode.none);
-            if (e.getValueIsAdjusting()) return; 
-            else report();
-        }
         public void keyTyped(KeyEvent e) { 
             char c = e.getKeyChar();
-            //System.out.println("keyTyped "+c);
-            if (c == KeyEvent.VK_ESCAPE) setMode(Mode.none);
-            else if (c == 'e' || c == 'x') setMode(Mode.exch); 
-            else if (c == 'm' || c == '*') setMode(Mode.mult); 
-            else if (c == 'a' || c == '+') setMode(Mode.addR); 
-            else if (c == 'n') but.doClick();
-            else if (c == 'b' || c == 's') {
-                mat.solve(false); display();
-            } 
+            if (mode == Mode.none) switch (c) {
+              case 'e': case 'x': setMode(Mode.exch); break;
+              case 'm': case '*': setMode(Mode.mult); break;
+              case 'a': case '+': setMode(Mode.addR); break;
+              case 'n': but.doClick(); break;
+              case 'i': inv.doClick(); break;
+              case 's': mat.solve(false); display(); break;
+            } else if (c == KeyEvent.VK_ESCAPE) setMode(Mode.none);
         }
         public void keyPressed(KeyEvent e) { }
         public void keyReleased(KeyEvent e) { }
@@ -235,17 +238,17 @@ public class Solver implements Runnable {
             if (e.getClickCount() > 1) {
                 //System.out.println("double click"); 
                 mat.forward(i); display();
-            } else if (mode == Mode.exch) {
-                txt1.setText(""+i); doAction();
-            } else if (mode == Mode.addR) {
+            } else if (mode == Mode.exch || mode == Mode.addR) {
                 txt2.setText(""+i); doAction();
             } else if (mode == Mode.mult) TK.beep();
         }
         public void actionPerformed(ActionEvent e) {
             Object s = e.getSource();
-            //System.out.println(s.getClass().getName());
+            int x = frm.getX()+30; int y = frm.getY()+30;
             if (s == txt1 || s == txt2) doAction();
-            else if (s == but) new Solver(frm.getX()+30, frm.getY()+30);
+            else if (s == but) new Solver(x, y);
+            else if (s == inv) new Solver(adj.clone(), x, y);
+            //System.out.println("inverse");
         }
     }
 
