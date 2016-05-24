@@ -11,7 +11,7 @@ public class Solver implements Runnable {
     enum Mode { none, exch, mult, addR }
     
     static final String 
-        MSG  = "Linear Equation Solver -- V1.1 May 2016",
+        MSG  = "Linear Equation Solver -- V1.2 May 2016",
         TXT1 = "e: exchange  m: multiply  a: add row  s: solve",
         EXCH = "exchange row ",
         MULT = "multiply row ",
@@ -33,19 +33,19 @@ public class Solver implements Runnable {
     final JFrame frm = new JFrame("Solver");
     final JLabel msg = new JLabel(MSG);
     final JButton but = new JButton("New");
-    final JButton inv = new JButton("Inverse");
+    final JButton inv = new JButton("Augment");
     final JLabel lab1 = new JLabel(TXT1);
     final JLabel lab2 = new JLabel(TXT2);
     final JTextField txt1 = new JTextField();
     final JTextField txt2 = new JTextField();
     final JLabel det = new JLabel();
-    Mode mode;  int curRow = -1;
+    Mode mode;  int curRow = 0; //must be in 1..M
     
     public Solver() { this(W, H); }
     public Solver(int x, int y) { this(Matrix.fromCB(), x, y); }
     public Solver(Matrix m, int x, int y) {
         mat = m;
-        adj = (mat.isSquare()? m.adjoinID() : null);
+        adj = (mat.isSquare()? m.augmentID() : null);
         JPanel pan = new JPanel(new BorderLayout(GAP, GAP));
         
         tab = new JTable(mat);
@@ -175,8 +175,8 @@ public class Solver implements Runnable {
     }
     void setMode(Mode m) {
         if (mode == m) return; mode = m; 
-        curRow = tab.getSelectedRow();
-        if (m == Mode.none || curRow == -1) {
+        curRow = tab.getSelectedRow()+1;
+        if (m == Mode.none || curRow == 0) {
             lab1.setText(TXT1);
             hideFields();
         } else if (m == Mode.exch) {
@@ -190,31 +190,31 @@ public class Solver implements Runnable {
             displayText1(); displayText2(false);
         }
     }
-    Number numFromField1() {
+    Number numFromField1() { //returns a factor
         Number k = Factory.parseNumber(txt1.getText());
         if (k != null || k.value() != 0) return k; 
         TK.beep(); return null;
     }
-    int intFromField2() {
+    int intFromField2() { //returns a row number
         Number n = Factory.parseNumber(txt2.getText());
         int j = (n == null? -1 : (int)n.value());
-        if (j >= 0 && j != curRow && j < mat.M) return j; 
+        if (j > 0 && j != curRow && j <= mat.M) return j; 
         TK.beep(); return -1;
     }
     void doAction() {
         if (mode == Mode.exch) {
             int j = intFromField2();
-            if (j < 0) return;
-            mat.exchange(curRow, j); 
+            if (j <= 0) return;
+            mat.exchange(curRow-1, j-1); 
         } else if (mode == Mode.mult) {
             Number k = numFromField1();
             if (k == null) return; 
-            mat.multiply(curRow, k); 
+            mat.multiply(curRow-1, k); 
         } else if (mode == Mode.addR) {
             Number k = numFromField1();
             int j = intFromField2();
-            if (k == null || j < 0) return; 
-            mat.addRow(curRow, k, j);
+            if (k == null || j <= 0) return; 
+            mat.addRow(curRow-1, k, j-1);
         }
         setMode(Mode.none); display();
     }
@@ -227,8 +227,9 @@ public class Solver implements Runnable {
               case 'm': case '*': setMode(Mode.mult); break;
               case 'a': case '+': setMode(Mode.addR); break;
               case 'n': but.doClick(); break;
-              case 'i': inv.doClick(); break;
+              case 'g': inv.doClick(); break;
               case 's': mat.solve(false); display(); break;
+              case 'b': mat.backward(); display(); break;
             } else if (c == KeyEvent.VK_ESCAPE) setMode(Mode.none);
         }
         public void keyPressed(KeyEvent e) { }
@@ -239,7 +240,7 @@ public class Solver implements Runnable {
                 //System.out.println("double click"); 
                 mat.forward(i); display();
             } else if (mode == Mode.exch || mode == Mode.addR) {
-                txt2.setText(""+i); doAction();
+                txt2.setText(""+(i+1)); doAction();
             } else if (mode == Mode.mult) TK.beep();
         }
         public void actionPerformed(ActionEvent e) {

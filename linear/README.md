@@ -20,6 +20,6 @@ In order to slow down the automated solution, double click on the rows, starting
 * a: add to this row a multiple of another row
 
 When a row number is required, you may click on that row
-(Not recommended, the system is designed for keyboard input)
+(Data entry is designed for keyboard input)
 
-**Note that rows are numbered from 0**
+**Note that rows are numbered from 1**

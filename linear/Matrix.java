@@ -24,7 +24,7 @@ class Row implements Cloneable {
           x[j] = data[j];
       return new Row(x);
    }
-   public Row adjoinZero() { 
+   public Row augmentZero() { 
       Number[] x = new Number[2*N];
       for (int j=0; j<N; j++) {
           x[j] = data[j]; x[N+j] = Matrix.ZERO;
@@ -43,7 +43,7 @@ class Row implements Cloneable {
 
 class Matrix implements Cloneable, javax.swing.table.TableModel {
    static final String[] 
-      NAME = { "x", "y", "z", "s", "t" };
+      NAME = { "x", "y", "z", "p", "q", "s", "t" };
    static final Number ZERO = Factory.newWhole(0);      
    static final Number ONE = Factory.newWhole(1);      
    static final Number MINUS = Factory.newWhole(-1);      
@@ -134,7 +134,7 @@ class Matrix implements Cloneable, javax.swing.table.TableModel {
    }
    public String getColumnName(int j) { 
        if (notTooManyVars) return NAME[j]; 
-       return Character.toString((char)('p'+j)); 
+       return "x"+(j+1);   //Character.toString((char)('p'+j)); 
    }
    public boolean isCellEditable(int i, int j) { return false; }
    public void addTableModelListener(TableModelListener l) { }
@@ -145,10 +145,10 @@ class Matrix implements Cloneable, javax.swing.table.TableModel {
           a[i] = row[i].clone();
       return new Matrix(a);
    }
-   public Matrix adjoinID() { 
+   public Matrix augmentID() { 
       Row[] a = new Row[M];
       for (int i=0; i<M; i++) { //for each row
-          a[i] = row[i].adjoinZero();
+          a[i] = row[i].augmentZero();
           a[i].data[M+i] = ONE;
       }
       return new Matrix(a);
