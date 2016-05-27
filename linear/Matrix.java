@@ -49,12 +49,19 @@ class Matrix implements Cloneable, javax.swing.table.TableModel {
    static final Number MINUS = Factory.newWhole(-1);      
    final int M;
    final Row[] row;
-   final boolean notTooManyVars;
+   final String description;
+   final String[] name;
    Number det = ONE;
    public Matrix() { this(toRows(B)); }
    public Matrix(Row[] ra) {
       M = ra.length; row = ra;
-      notTooManyVars = (ra[0].N < NAME.length);
+      int N = getColumnCount();
+      description = M+"x"+N+" matrix";
+      if (N <= NAME.length) name = NAME;
+      else {
+          name = new String[N];
+          for (int j=0; j<N; j++) name[j] = "x"+(j+1); 
+      }
    }
    public boolean isSquare() {
       return getRowCount() == getColumnCount();
@@ -105,7 +112,7 @@ class Matrix implements Cloneable, javax.swing.table.TableModel {
        Number p = getValueAt(k, j);
        multiply(k, p.inverse());
        for (int i=k+1; i<M; i++) 
-           addRow(i, minus(getValueAt(i, j)), k);  //-val(i, j)
+           addRow(i, minus(getValueAt(i, j)), k);
        return (k == M-1);
    }
    void backward() {
@@ -122,8 +129,8 @@ class Matrix implements Cloneable, javax.swing.table.TableModel {
            k++; if (print) printData();
        }
        System.out.printf("det = %s \n", det);
-       if (isSquare()) return;
-       backward(); if (print) printData();
+       if (!isSquare()) backward(); 
+       if (print) printData();
    }
    public Class<?> getColumnClass(int j) { return Number.class; }
    public int getRowCount() { return M; }
@@ -132,10 +139,7 @@ class Matrix implements Cloneable, javax.swing.table.TableModel {
    public void setValueAt(Object v, int i, int j) { 
        row[i].data[j] = (Number)v; 
    }
-   public String getColumnName(int j) { 
-       if (notTooManyVars) return NAME[j]; 
-       return "x"+(j+1);   //Character.toString((char)('p'+j)); 
-   }
+   public String getColumnName(int j) { return name[j]; }
    public boolean isCellEditable(int i, int j) { return false; }
    public void addTableModelListener(TableModelListener l) { }
    public void removeTableModelListener(TableModelListener l) { }
@@ -154,7 +158,7 @@ class Matrix implements Cloneable, javax.swing.table.TableModel {
       return new Matrix(a);
    }
    public String toString() {
-       return M+"x"+row[0].N+" matrix";
+       return description;
    }
 
    static final int[][] 

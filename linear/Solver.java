@@ -11,8 +11,11 @@ public class Solver implements Runnable {
     enum Mode { none, exch, mult, addR }
     
     static final String 
-        MSG  = "Linear Equation Solver -- V1.2 May 2016",
+        MSG  = "Linear Equation Solver -- V1.3 May 2016",
         TXT1 = "e: exchange  m: multiply  a: add row  s: solve",
+        HELP = "<HTML>e: exchange  m: multiply  a: add row <BR>"
+             + "s: solve  b: backward  g: augment  u: undo <BR>"
+             + "use CTRL-C to copy the selection in the matrix",
         EXCH = "exchange row ",
         MULT = "multiply row ",
         ADDR = "add to row ",
@@ -27,25 +30,26 @@ public class Solver implements Runnable {
     static final Font NORMAL = scaledFont("Dialog", 0, 13);
     static final Font SMALL = scaledFont("Dialog", 0, 10);
     
-    final Matrix mat, adj;
+    final Matrix mat, org;
     final JTable tab;
     final Ear ear = new Ear();
     final JFrame frm = new JFrame("Solver");
     final JLabel msg = new JLabel(MSG);
-    final JButton but = new JButton("New");
-    final JButton inv = new JButton("Augment");
+    final JButton newB = new JButton("New");
+    final JButton orgB = new JButton("Original");
+    final JButton augB = new JButton("Augmented");
     final JLabel lab1 = new JLabel(TXT1);
     final JLabel lab2 = new JLabel(TXT2);
     final JTextField txt1 = new JTextField();
     final JTextField txt2 = new JTextField();
     final JLabel det = new JLabel();
-    Mode mode;  int curRow = 0; //must be in 1..M
+    Mode mode, preMode; 
+    int curRow, preRow; //must be in 1..M
     
     public Solver() { this(W, H); }
     public Solver(int x, int y) { this(Matrix.fromCB(), x, y); }
     public Solver(Matrix m, int x, int y) {
-        mat = m;
-        adj = (mat.isSquare()? m.augmentID() : null);
+        mat = m.clone(); org = m;
         JPanel pan = new JPanel(new BorderLayout(GAP, GAP));
         
         tab = new JTable(mat);
@@ -55,13 +59,13 @@ public class Solver implements Runnable {
         head.setFont(NORMAL);
         head.setReorderingAllowed(false);
         //tab.setFillsViewportHeight(true);
-        tab.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        tab.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        tab.setCellSelectionEnabled(true);
         JLabel cr = (JLabel)tab.getCellRenderer(0, 0);
         cr.setHorizontalAlignment(JLabel.CENTER);
 
         JScrollPane scr = new JScrollPane(tab);
         Dimension d = head.getPreferredSize();
-        //System.out.println(d);
         int w = mat.getColumnCount() * W;
         int h = mat.getRowCount() * H + (d.height+3);
         scr.setPreferredSize(new Dimension(w, h));
@@ -73,14 +77,16 @@ public class Solver implements Runnable {
         pan.add(bottomPanel(), "South");
         
         pan.setBorder(new EmptyBorder(GAP, GAP, GAP, GAP));
-        tab.setToolTipText("Coefficients");
+        pan.setToolTipText(HELP);
         det.setToolTipText("The result");
+        newB.setToolTipText("New matrix using the system clipboard");
+        orgB.setToolTipText("Use the original matrix");
+        augB.setToolTipText("Augment the identy to invert this matrix");
 
-        frm.setContentPane(pan); 
         frm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frm.setLocation(x, y);
-        frm.pack(); 
-        setMode(Mode.none);  //displayFields(false);
+        frm.setContentPane(pan); frm.setLocation(x, y); frm.pack(); 
+        
+        setMode(Mode.none); preMode = null; preRow = -1;
         frm.setVisible(true);
     }
     JPanel topPanel() {
@@ -90,13 +96,17 @@ public class Solver implements Runnable {
         msg.setHorizontalAlignment(SwingConstants.CENTER);
         p.add(msg);
         
-        but.setFont(SMALL);
-        but.addActionListener(ear);
-        p.add(but);
+        orgB.setFont(SMALL);
+        orgB.addActionListener(ear);
+        p.add(orgB);
         
-        inv.setFont(SMALL);
-        inv.addActionListener(ear);
-        if (mat.isSquare()) p.add(inv);
+        newB.setFont(SMALL);
+        newB.addActionListener(ear);
+        p.add(newB);
+        
+        augB.setFont(SMALL);
+        augB.addActionListener(ear);
+        if (mat.isSquare()) p.add(augB);
         return p;
     }
     JPanel composite() {
@@ -174,8 +184,10 @@ public class Solver implements Runnable {
         else lab2.setVisible(true); 
     }
     void setMode(Mode m) {
-        if (mode == m) return; mode = m; 
-        curRow = tab.getSelectedRow()+1;
+        if (mode == m) return; 
+        preMode = mode; mode = m; 
+        preRow = curRow; curRow = tab.getSelectedRow()+1;
+        tab.addColumnSelectionInterval(0, mat.getColumnCount()-1);
         if (m == Mode.none || curRow == 0) {
             lab1.setText(TXT1);
             hideFields();
@@ -218,6 +230,18 @@ public class Solver implements Runnable {
         }
         setMode(Mode.none); display();
     }
+    void setNumber(Number k) { 
+        txt1.setText(k.toString()); 
+    }
+    public void undoAction() {
+        if (preMode == null || mode != Mode.none) return; 
+        //System.out.println("undo "+preMode); 
+        if (preMode == Mode.mult) 
+            setNumber(numFromField1().inverse()); 
+        else if (preMode == Mode.addR) 
+            setNumber(Matrix.minus(numFromField1())); 
+        mode = preMode; curRow = preRow; doAction();
+    }
 
     class Ear extends MouseAdapter implements ActionListener, KeyListener {
         public void keyTyped(KeyEvent e) { 
@@ -226,8 +250,8 @@ public class Solver implements Runnable {
               case 'e': case 'x': setMode(Mode.exch); break;
               case 'm': case '*': setMode(Mode.mult); break;
               case 'a': case '+': setMode(Mode.addR); break;
-              case 'n': but.doClick(); break;
-              case 'g': inv.doClick(); break;
+              case 'u': undoAction(); break;
+              case 'g': augB.doClick(); break;
               case 's': mat.solve(false); display(); break;
               case 'b': mat.backward(); display(); break;
             } else if (c == KeyEvent.VK_ESCAPE) setMode(Mode.none);
@@ -237,7 +261,6 @@ public class Solver implements Runnable {
         public void mouseClicked(MouseEvent e) {
             int i = tab.getSelectedRow();
             if (e.getClickCount() > 1) {
-                //System.out.println("double click"); 
                 mat.forward(i); display();
             } else if (mode == Mode.exch || mode == Mode.addR) {
                 txt2.setText(""+(i+1)); doAction();
@@ -247,12 +270,15 @@ public class Solver implements Runnable {
             Object s = e.getSource();
             int x = frm.getX()+30; int y = frm.getY()+30;
             if (s == txt1 || s == txt2) doAction();
-            else if (s == but) new Solver(x, y);
-            else if (s == inv) new Solver(adj.clone(), x, y);
-            //System.out.println("inverse");
+            else if (s == orgB) new Solver(org, x, y);
+            else if (s == newB) new Solver(x, y);
+            else if (s == augB) new Solver(org.augmentID(), x, y);
         }
     }
-
+    
+    static { 
+        UIManager.put("ToolTip.font", SMALL); 
+    }
     public static float scaled(float k) { return k*RES_RATIO; }
     public static int scaled(int k) { return Math.round(k*RES_RATIO); }
     public static Font scaledFont(String name, int style, float size) {

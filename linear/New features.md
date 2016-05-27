@@ -2,6 +2,11 @@
 
 ### Binary version history is [here](https://github.com/maeyler/PlainJava/commits/master/linear/solver.jar)
 
+### V1.3  May 27, 2016
+* Table allows multiple selection and copy
+* The last operation accepts Undo
+* Original matrix can be reverted
+* Help message is expanded
 
 ### V1.2  May 24, 2016
 * Rows are counted from 1
