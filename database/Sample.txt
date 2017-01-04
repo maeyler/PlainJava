@@ -1,0 +1,23 @@
+211592946	CANAN	BÝNGÖL	HUK 307	Borçlar Hukuku Özel Hükümler	09:00-12:00	3.01.2017	Batý Kampüs #KS02
+211601003	DAMLA	KIR	HUK 307	Borçlar Hukuku Özel Hükümler	09:00-12:00	3.01.2017	Batý Kampüs #KS02
+211601080	KÜBRA	TUNCEL	HUK 307	Borçlar Hukuku Özel Hükümler	09:00-12:00	3.01.2017	Batý Kampüs #KS02
+214040686	ENES	ÝNCE	ITM 301	International Economics	09:00-12:00	9.01.2017	Batý Kampüs #KS02
+214050770	ÝBRAHÝM	ESER	ITM 301	International Economics	09:00-12:00	9.01.2017	Batý Kampüs #KS02
+214051482	EMRE	ARPACI	ITM 301	International Economics	09:00-12:00	9.01.2017	Batý Kampüs #KS02
+214052430	HANDE	BAYAT	ITM 301	International Economics	09:00-12:00	9.01.2017	Batý Kampüs #KS02
+215252525	GÜLÝS	ERSÖZ	UNI 117 02	Understanding Society and Culture	09:00-12:00	2.01.2017	Batý Kampüs #Z004
+215252740	EMRE	SÜZGÜN	UNI 117 02	Understanding Society and Culture	09:00-12:00	2.01.2017	Batý Kampüs #Z004
+211592946	CANAN	BÝNGÖL	ITM 301	International Economics	09:00-12:00	9.01.2017	Batý Kampüs #KS02
+214052430	HANDE	BAYAT	ITM 301	International Economics	09:00-12:00	9.01.2017	Batý Kampüs #KS02
+211592946	CANAN	BÝNGÖL	UNI 117 02	Understanding Society and Culture	09:00-12:00	2.01.2017	Batý Kampüs #Z004
+216320815	REMZÝ	AYDIN	UNI 117 02	Understanding Society and Culture	09:00-12:00	2.01.2017	Batý Kampüs #Z004
+215300886	BERAT	KASARCI	UNI 117 02	Understanding Society and Culture	09:00-12:00	2.01.2017	Batý Kampüs #Z004
+215300927	AFRANUR	BAYRAM	UNI 117 02	Understanding Society and Culture	09:00-12:00	2.01.2017	Batý Kampüs #Z004
+315860215	BAHADIR	DURUKAN	MGT 572	Deðiþim Yönetimi ve Örgüt Geliþtirme	09:00-12:00	7.01.2017	Batý Kampüs #1003
+315861225	SAÝME	KÜTÜKLÜ	MGT 572	Deðiþim Yönetimi ve Örgüt Geliþtirme	09:00-12:00	7.01.2017	Batý Kampüs #1003
+315860235	ÜLKÜ	BIRTIL	MGT 572	Deðiþim Yönetimi ve Örgüt Geliþtirme	09:00-12:00	7.01.2017	Batý Kampüs #1003
+216320815	REMZÝ	AYDIN	MATH 206	Differential Equations and Comp. Ana.	09:00-12:00	11.01.2017	Batý Kampüs #Z019
+216331079	SERHAN	SAYDAM	MATH 206	Differential Equations and Comp. Ana.	09:00-12:00	11.01.2017	Batý Kampüs #Z019
+716353500	AHMET	BÝLGEN	MATH 206	Differential Equations and Comp. Ana.	09:00-12:00	11.01.2017	Batý Kampüs #Z019
+216451154	ÝSMAÝL	ÞAKAR	MDB 100	Bilgisayar Becerileri	09:00-12:00	3.01.2017	Batý Kampüs #Z013
+216453211	VÝLDAN	TAÞ	MDB 100	Bilgisayar Becerileri	09:00-12:00	3.01.2017	Batý Kampüs #Z013
