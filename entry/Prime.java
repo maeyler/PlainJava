@@ -2,7 +2,7 @@
 // 14.3.2003  implement Set
 // 26.1.2016  use HashSet
 
-//import java.util.HashSet;
+import java.util.HashSet;
 
 class Prime {
    static void primes(int M) {
@@ -18,13 +18,12 @@ class Prime {
          }
       System.out.println(); 
       long t = System.currentTimeMillis() - time;
-      System.out.println(t+" msec calculation");
-      System.out.println(s);
+      System.out.println(s.size());
       t = System.currentTimeMillis() - time;
       System.out.println(t+" msec total");
    }
    public static void main(String args[]) {
-      primes(1000);
+      primes(50000);
    }
 }
 
