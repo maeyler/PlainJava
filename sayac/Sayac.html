@@ -8,28 +8,22 @@
 
 <script>
 "use strict";
-var hm, cnt, output;  //global elements
+var output;  //global elements
 function twoDigits(t) {
     if (t>9) return ""+t;
     return "0"+t;
 }
-function setHourMin() {
-    var d = new Date();
-    hm = twoDigits(d.getHours())+":"
-        +twoDigits(d.getMinutes());
-    document.title = hm; console.log(hm);
-}
 function count() {
-    cnt = cnt-1;
     var d1 = new Date();
-    var d2 = new Date("11.05.2028"); //Nov 5
+    var d2 = new Date("11/05/2028"); //Nov 5
     var diff = (d2.getTime()-d1.getTime())/(24*3600*1000);
+    if (diff < 0) diff = "Haddi aştınız!";
     output.innerHTML = Math.floor(diff);
 }
 </script>
 
 <style>
-    .mavi {
+    div {
         background-color: blue;
         color: yellow;
         text-align: center;
@@ -48,7 +42,7 @@ function count() {
 
 <body>
 
-<div class=mavi>
+<div>
 <p id=output>3797 </p>
 <p class=small>gün kaldı</p>
 </div>
