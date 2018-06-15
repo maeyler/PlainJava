@@ -152,28 +152,22 @@ public class PopupMenuDemo implements ActionListener, ItemListener {
         output.addMouseListener(popupListener);
     }
 
-    public void actionPerformed(ActionEvent e) {
+    public void report(AWTEvent e, String s2) {
         JMenuItem source = (JMenuItem)(e.getSource());
-        String s = "Action event detected."
-                   + newline
-                   + "    Event source: " + source.getText()
-                   + " (an instance of " + getClassName(source) + ")";
-        output.append(s + newline);
+        output.append(getClassName(e)+": "+ source.getText()
+                   + " ["+getClassName(source)+"] ");
+        if (s2.length() > 0) output.append(s2);
+        output.append(newline);
         output.setCaretPosition(output.getDocument().getLength());
+    }
+    public void actionPerformed(ActionEvent e) {
+        report(e, "");
     }
 
     public void itemStateChanged(ItemEvent e) {
-        JMenuItem source = (JMenuItem)(e.getSource());
-        String s = "Item event detected."
-                   + newline
-                   + "    Event source: " + source.getText()
-                   + " (an instance of " + getClassName(source) + ")"
-                   + newline
-                   + "    New state: "
-                   + ((e.getStateChange() == ItemEvent.SELECTED) ?
-                     "selected":"unselected");
-        output.append(s + newline);
-        output.setCaretPosition(output.getDocument().getLength());
+        String s = (e.getStateChange() == ItemEvent.SELECTED) ?
+                     "selected":"unselected";
+        report(e, s);
     }
 
     // Returns just the class name -- no package info.

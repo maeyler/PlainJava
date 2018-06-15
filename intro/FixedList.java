@@ -1,4 +1,4 @@
-class FixedList extends java.util.AbstractList {
+class FixedList extends java.util.AbstractList<String> {
     String[] x;
     public FixedList(String[] a) {
         x = a;

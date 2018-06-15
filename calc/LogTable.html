@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>LogTable </title>
+</head>
+
+<script>
+"use strict";
+var title, output;  //global elements
+    function header() {
+        txt += ""; var i;
+        for (i=0; i<10; i++)
+             txt += "     "+i;
+        txt += "\n";
+    }
+    function oneLine(a) {
+        const C = 10000/Math.log(10);
+        txt += ""+a;
+        var i, x = a/10;
+        for (i=0; i<10; i++) {
+            var n = Math.round(C*Math.log(x));
+            txt += "  "+n;
+            x += 0.01;
+        }
+        txt += "\n";
+        //console.log(txt);
+    }
+</script>
+
+<body>
+<h2 id=title></h2>
+
+<p id=output></p>
+<script>
+    title = document.getElementById("title");
+    title.innerHTML = document.title;
+        var a, txt;
+        txt = "<pre>\n"; header();
+        for (a=50; a<54; a++) oneLine(a);
+        txt += "</pre><br />";
+        
+        const 
+         G = 6.674E-11,// N m2/kg2 Gravitational constant
+         M = 5.972E24, // kg  mass of earth
+         R = 6.371E6,  // m  radius of earth
+         m = 7.347E22, // kg  mass of moon
+         d = 3.844E8;  // m  distance to moon
+        txt += "<p>GM/R2 = "+(G*M/R/R)+"</p>"
+              +"<p>Gm/d2 = "+(G*m/d/d)+"</p>"; 
+    output = document.getElementById("output");
+    output.innerHTML = txt;
+</script>
+</body>
+</html>
