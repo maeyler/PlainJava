@@ -13,12 +13,14 @@ function twoDigits(t) {
     if (t>9) return ""+t;
     return "0"+t;
 }
+const T = new Date("11/05/2028").getTime(); //Nov 5
 function count() {
-    var d1 = new Date();
-    var d2 = new Date("11/05/2028"); //Nov 5
-    var diff = (d2.getTime()-d1.getTime())/(24*3600*1000);
-    if (diff < 0) diff = "Haddi aştınız!";
-    output.innerHTML = Math.floor(diff);
+    var t1 = new Date().getTime();
+    var diff = Math.floor((T - t1)/(24*3600*1000));
+    if (diff <= 0) {
+        diff = "Haddi aştınız!"; small.hidden = true
+    }
+    output.innerText = diff;
 }
 </script>
 
@@ -34,7 +36,7 @@ function count() {
         padding: 20px 10px 0 10px;
         margin: 0px;
     }
-    .small {
+    #small {
         font-size: 50px;
         padding: 0 10px 20px 10px;
     }
@@ -44,7 +46,7 @@ function count() {
 
 <div>
 <p id=output>3797 </p>
-<p class=small>gün kaldı</p>
+<p id=small>gün kaldı</p>
 </div>
 
 <script>
